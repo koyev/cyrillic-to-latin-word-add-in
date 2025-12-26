@@ -1,4 +1,4 @@
-﻿using CyrillicToLatinWordAddIn.Utilities;
+﻿using CyrillicToLatinWordPlugIn.Utilities;
 using Microsoft.Office.Tools.Ribbon;
 using Microsoft.Win32;
 using Word = Microsoft.Office.Interop.Word;
@@ -6,7 +6,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace CyrillicToLatinWordAddIn
+namespace CyrillicToLatinWordPlugIn
 {
     public partial class ConvertButton
     {
@@ -29,7 +29,7 @@ namespace CyrillicToLatinWordAddIn
 
         private void ConvertButton_Load(object sender, RibbonUIEventArgs e)
         {
-            officeVersion = Globals.ThisAddIn.Application.Version;
+            officeVersion = Globals.ThisPlugIn.Application.Version;
             themeCode = GetOfficeThemeCode();
 
             UpdateButtonImage(themeCode);
@@ -42,8 +42,8 @@ namespace CyrillicToLatinWordAddIn
 
         private void convertBtn_Click(object sender, RibbonControlEventArgs e)
         {
-            Word.Document doc = Globals.ThisAddIn.Application.ActiveDocument;
-            Word.Selection selection = Globals.ThisAddIn.Application.Selection;
+            Word.Document doc = Globals.ThisPlugIn.Application.ActiveDocument;
+            Word.Selection selection = Globals.ThisPlugIn.Application.Selection;
 
             if (selection != null && selection.Text.Length > 0)
             {

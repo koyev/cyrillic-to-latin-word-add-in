@@ -1,20 +1,20 @@
 ﻿using System.Diagnostics;
 using System;
 
-namespace CyrillicToLatinWordAddIn
+namespace CyrillicToLatinWordPlugIn
 {
-    public partial class ThisAddIn
+    public partial class ThisPlugIn
     {
         private ConvertButton convertButton;
-        private void ThisAddIn_Startup(object sender, EventArgs e)
+        private void ThisPlugIn_Startup(object sender, EventArgs e)
         {
-            Debug.WriteLine("ThisAddIn_Startup called");
+            Debug.WriteLine("ThisPlugIn_Startup called");
             convertButton = new ConvertButton();
         }
 
-        private void ThisAddIn_Shutdown(object sender, EventArgs e)
+        private void ThisPlugIn_Shutdown(object sender, EventArgs e)
         {
-            Debug.WriteLine("ThisAddIn_Shutdown called");
+            Debug.WriteLine("ThisPlugIn_Shutdown called");
             convertButton?.ConvertButton_Unload();
         }
 
@@ -26,8 +26,8 @@ namespace CyrillicToLatinWordAddIn
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(ThisAddIn_Startup);
-            this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
+            this.Startup += new System.EventHandler(ThisPlugIn_Startup);
+            this.Shutdown += new System.EventHandler(ThisPlugIn_Shutdown);
         }
         
         #endregion

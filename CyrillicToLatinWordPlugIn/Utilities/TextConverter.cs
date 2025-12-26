@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace CyrillicToLatinWordAddIn.Utilities
+namespace CyrillicToLatinWordPlugIn.Utilities
 {
     public static class TextConverter
     {
