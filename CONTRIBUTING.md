@@ -1,6 +1,6 @@
 # Contributing
 
-We're excited that you're interested in contributing to the Cyrillic to Latin Word Plug-In! This document provides guidelines and instructions for contributing to the project.
+We're excited that you're interested in contributing to the Cyrillic to Latin Word Add-In! This document provides guidelines and instructions for contributing to the project.
 
 ## Table of contents
 
@@ -32,7 +32,7 @@ Before you start, ensure you have the following installed:
 
 2. **Open the solution in Visual Studio**
 
-   - Open `CyrillicToLatinWordPlugIn.sln` in Visual Studio
+   - Open `CyrillicToLatinWordAddIn.sln` in Visual Studio
    - Visual Studio should automatically restore any required NuGet packages
 
 3. **Install Office Developer Tools (if needed)**
@@ -43,7 +43,7 @@ Before you start, ensure you have the following installed:
    - Restart Visual Studio after installation
 
 4. **Configure the Project**
-   - Right-click on the `CyrillicToLatinWordPlugIn` project
+   - Right-click on the `CyrillicToLatinWordAddIn` project
    - Select **Properties**
    - Verify that the .NET Framework version is set to 4.7.2 or higher
    - Set your preferred build configuration (Debug/Release)
@@ -60,15 +60,15 @@ Before you start, ensure you have the following installed:
 2. **Build from Command Line**
 
    ```bash
-   cd CyrillicToLatinWordPlugIn
-   msbuild CyrillicToLatinWordPlugIn.csproj /p:Configuration=Debug /p:Platform=AnyCPU
+   cd CyrillicToLatinWordAddIn
+   msbuild CyrillicToLatinWordAddIn.csproj /p:Configuration=Debug /p:Platform=AnyCPU
    ```
 
 ### Running and Testing
 
-1. **Debug the Plug-In**
+1. **Debug the Add-In**
 
-   - Set `CyrillicToLatinWordPlugIn` as the startup project
+   - Set `CyrillicToLatinWordAddIn` as the startup project
    - Press F5 to start debugging
    - This will launch a test instance of Microsoft Word with the add-in loaded
 
@@ -203,4 +203,4 @@ Please see [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 - 💬 Open a [Discussion](https://github.com/koyev/cyrillic-to-latin-word-add-in/discussions)
 - 🐛 [Report an Issue](https://github.com/koyev/cyrillic-to-latin-word-add-in/issues)
 
-Thank you for contributing to the Cyrillic to Latin Word Plug-In! 🎉
+Thank you for contributing to the Cyrillic to Latin Word Add-In! 🎉

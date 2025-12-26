@@ -1,4 +1,4 @@
-﻿namespace CyrillicToLatinWordPlugIn
+﻿namespace CyrillicToLatinWordAddIn
 {
     partial class ConvertButton : Microsoft.Office.Tools.Ribbon.RibbonBase
     {

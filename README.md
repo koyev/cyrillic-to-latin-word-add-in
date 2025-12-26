@@ -1,10 +1,10 @@
-# Cyrillic to Latin Word Plug-In
+# Cyrillic to Latin Word Add-In
 
 [![GitHub Release](https://img.shields.io/github/v/release/koyev/cyrillic-to-latin-word-add-in?label=release&style=flat-square)](https://github.com/koyev/cyrillic-to-latin-word-add-in/releases) [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/koyev/cyrillic-to-latin-word-add-in/blob/main/LICENSE.txt) [![GitHub Issues](https://img.shields.io/github/issues/koyev/cyrillic-to-latin-word-add-in?style=flat-square)](https://github.com/koyev/cyrillic-to-latin-word-add-in/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/koyev/cyrillic-to-latin-word-add-in?style=flat-square)](https://github.com/koyev/cyrillic-to-latin-word-add-in/pulls)
 
 ## About
 
-This is a Plug-In for Microsoft Word that provides seamless conversion of Cyrillic text to Latin and vice versa. Perfect for users working with multilingual documents or migrating content between writing systems.
+This is a Add-In for Microsoft Word that provides seamless conversion of Cyrillic text to Latin and vice versa. Perfect for users working with multilingual documents or migrating content between writing systems.
 
 **Features:**
 
@@ -30,7 +30,7 @@ Jump to:
 
 ### Installation (Word Desktop)
 
-1. **Download the Plug-In**
+1. **Download the Add-In**
 
    - Visit the [Releases](https://github.com/koyev/cyrillic-to-latin-word-add-in/releases) page
    - Download the latest version
@@ -39,19 +39,19 @@ Jump to:
 
    - Extract the downloaded files
    - Open Word
-   - Go to **File** → **Options** → **Trust Center** → **Trust Center Settings** → **Trusted Plug-In Catalogs**
+   - Go to **File** → **Options** → **Trust Center** → **Trust Center Settings** → **Trusted Add-In Catalogs**
    - Add the manifest URL or install manually through the add-in store
 
 ### Installation (Word Online)
 
-1. **Download the Plug-In**
+1. **Download the Add-In**
 
    - Visit the [Releases](https://github.com/koyev/cyrillic-to-latin-word-add-in/releases) page
    - Download the latest version
 
 2. **Install in Word Online**
    - Open your document in Word Online
-   - Click **Insert** → **Get Plug-Ins** → **My Plug-Ins** → **Upload My Plug-In**
+   - Click **Insert** → **Get Add-Ins** → **My Add-Ins** → **Upload My Add-In**
    - Select the manifest file
 
 <!-- System Requirements removed as requested -->
