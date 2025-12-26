@@ -77,14 +77,14 @@ The add-in supports comprehensive Cyrillic to Latin conversion including:
 
 **Input (Cyrillic):**
 
-```
-Добро дошли у наш пример конверзије текста.
+```text
+Ћуд је женска смијешна работа!
 ```
 
 **Output (Latin):**
 
-```
-Dobro došli u naš primer konverzije teksta.
+```text
+Ćud je ženska smiješna rabota!
 ```
 
 ## Support & Contribution

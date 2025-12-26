@@ -129,6 +129,7 @@ Before you start, ensure you have the following installed:
    - Reference any related issues in commit messages
 
 5. **Push to your fork**
+
    ```bash
    git push origin feature/your-feature-name
    ```
@@ -164,6 +165,7 @@ Before you start, ensure you have the following installed:
    ```
 
 3. **Update your local main**
+
    ```bash
    git checkout main
    git pull upstream main
@@ -177,7 +179,7 @@ Use concise Conventional Commits for clarity and automation.
 
 Format:
 
-```
+```text
 <type>/optional scope: <short imperative subject>
 ```
 
@@ -185,7 +187,7 @@ Common types: `feature`, `fix`, `docs`, `refactor`, `test`, `chore`.
 
 Examples:
 
-```
+```text
 feature/converter: add support for Macedonian characters
 fix/ui: handle selection on Word Online
 docs: simplify installation steps
