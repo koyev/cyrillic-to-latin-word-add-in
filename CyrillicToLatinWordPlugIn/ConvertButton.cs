@@ -3,8 +3,12 @@ using Microsoft.Office.Tools.Ribbon;
 using Microsoft.Win32;
 using Word = Microsoft.Office.Interop.Word;
 using System;
+using System.Drawing;
+using System.IO;
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Threading;
+using Svg;
 
 namespace CyrillicToLatinWordPlugIn
 {
@@ -61,19 +65,30 @@ namespace CyrillicToLatinWordPlugIn
             }
         }
 
-        private void UpdateButtonImage(int themeCode)
+        private void UpdateButtonImage(int currentThemeCode)
         {
-            // The themeCode is an integer that represents the current Office theme
             // COLORFUL = 0, DARKGREY = 3, WHITE = 5, BLACK = 4
-            // COLORFUL, DARKGREY AND WHITE use the light theme icon
+            bool isDark = currentThemeCode == 4;
 
-            if (themeCode == 4)
+            Color glyphColor = isDark ? Color.White : Color.Black;
+            Color slashColor = isDark ? Color.DeepSkyBlue : Color.FromArgb(0, 114, 198);
+
+            this.convertBtn.Image = RenderButtonSvg(glyphColor, slashColor);
+        }
+
+        private Bitmap RenderButtonSvg(Color glyphColor, Color slashColor)
+        {
+            string svgContent = Properties.Resources.btn_image;
+
+            svgContent = svgContent
+                .Replace("{{GLYPH_COLOR}}", ColorTranslator.ToHtml(glyphColor))
+                .Replace("{{SLASH_COLOR}}", ColorTranslator.ToHtml(slashColor));
+
+            using (var svgStream = new MemoryStream(Encoding.UTF8.GetBytes(svgContent)))
             {
-                this.convertBtn.Image = Properties.Resources.dark_theme_icon;
-            }
-            else
-            {
-                this.convertBtn.Image = Properties.Resources.light_theme_icon;
+                var document = SvgDocument.Open<SvgDocument>(svgStream);
+                // Render at a reasonable size for Ribbon large controls
+                return document.Draw(64, 64);
             }
         }
 
